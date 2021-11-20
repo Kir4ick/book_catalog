@@ -1,0 +1,171 @@
+
+body{
+    margin: 0px;
+    padding: 0px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.buttons{
+    margin: 20px auto;
+}
+button{
+    border: 0px;
+    background-color: white;
+    cursor: pointer;
+    font-size: 16px;
+}
+button:hover{
+    color: red;
+}
+header{
+    height: 90px;
+    background-color: black;
+    width: 100%;
+}
+.conteiner_header{
+    max-width: 1440px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    margin: 0px auto;
+}
+.name_page{
+    color: white;
+}
+.name_page h1{
+    margin: 5px auto;
+}
+.name_page p{
+    margin-top: 5px;
+}
+.registr_autoriz{
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    
+}
+.registr_autoriz button{
+    display: inline-block;
+    border: 0px;
+    background-color: black;
+    font-size: 16px;
+    color: white;
+    margin-bottom: -10px;
+    margin-left: 10px;
+}
+.registr_autoriz button:hover{
+    color: red;
+    cursor: pointer;
+}
+.conteiner{
+    max-width: 1440px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row-reverse;
+    margin: auto;
+    height: 100%;
+}
+.content_block{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: 2px solid black;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    height: 100px;
+    text-align: center;
+    margin: 10px auto;
+    width: 95%;
+
+}
+.new_booksss{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: 2px solid black;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    height: 100px;
+    text-align: center;
+    margin: 10px auto;
+    width: 95%;
+}
+.new_booksss input{
+    width: 150px;
+    margin: 20px 0px;
+}
+.new_booksss textarea{
+    width: 400px;
+    height: 100px;
+    margin: 20px 0px;
+    resize: none;
+}
+.user{
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+.user_class{
+    display: flex;
+    align-items: center;
+}
+.user_name{
+    margin-right: 20px;
+    margin-top: 15px;
+}
+.exit{
+    border: 0px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+.exit:hover{
+    color: red;
+}
+.table_img{
+    width: 90px;
+    height: 110px;
+}
+
+section{
+    height: 100%;
+    width: 100%;
+}
+.section_cont{
+    max-width: 1440px;
+    margin: auto;
+    height: 100%;
+}
+.content{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+.content_row{
+    display: inline-table;
+    border: 2px solid black;
+    width: 200px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    height: 320px;
+    text-align: center;
+    margin-right: 30px;
+    margin-bottom: 30px;
+}
+.search{
+    margin-top: 40px;
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+.inp_search_book{
+    border: 0px;
+    border-bottom: 2px solid black;
+    width: 200px;
+    margin-right: 50px;
+    outline: none;
+}

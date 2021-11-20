@@ -1,0 +1,195 @@
+h1,h2,h3,h4,h5,h6,button,a,p{
+    font-family: 'Century Gothic';
+}
+button{
+    display: block;
+    margin-top: 20px;
+    border: 0px;
+    font-size: 16px;
+    background-color: white;
+}
+button:hover{
+    color: red;
+    cursor: pointer;
+}
+html{
+    height: 100%;
+}
+body{
+    min-height: 100%;
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+}
+/* Header */
+header{
+    height: 90px;
+    background-color: black;
+    width: 100%;
+}
+.conteiner_header{
+    max-width: 1440px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    margin: 0px auto;
+}
+.name_page{
+    color: white;
+}
+.name_page h1{
+    margin: 5px auto;
+}
+.name_page p{
+    margin-top: 5px;
+}
+.registr_autoriz{
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.registr_autoriz button{
+    display: inline-block;
+    border: 0px;
+    background-color: black;
+    font-size: 16px;
+    color: white;
+    margin-bottom: 5px;
+    margin-left: 10px;
+}
+.registr_autoriz button:hover{
+    color: red;
+    cursor: pointer;
+}
+/* main */
+main{
+    width: 100%;
+    flex: 1 1 100%;
+    margin: 20px 0px;
+    display: flex;
+}
+.main_conteiner{
+    max-width: 1440px;
+    margin: 0px auto;
+    flex: 0 0 100%;
+}
+.content{
+    display: flex;
+    justify-content: space-between;
+}
+.content img{
+    height: 100%;
+    width: 40%;
+}
+.content_text{
+    width: 55%;
+    word-wrap: break-word;
+}
+/* Комментарии */
+.comment{
+    width: 50%;
+    word-wrap: break-word;
+}
+.new_comment form{
+    display: flex;
+}
+.new_comment form input{
+    outline: none;
+    border: none;
+    border-bottom: 2px solid black;
+    margin-top: 18px;
+    font-size: 14px;
+    height: 20px;
+    margin-right: 20px;
+    width: 50%;
+}
+.comments_user{
+    margin-top: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+/* footer */
+footer{
+    flex: 0 0 120px;
+    height: 120px;
+    background-color: black;
+    width: 100%;
+}
+/* Модальные окна */
+.registr{
+    position: absolute;
+    top: 88px;
+    left: 66%;
+    width: 20%;
+    height: 30%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid black;
+}
+.registr form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+.autorize form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+.registr form input{
+    width: 80%;
+    margin-bottom: 25px;
+    height: 20px;
+    outline: none;
+    border: 0px;
+    border-bottom: 2px solid black;
+    font-size: 16px;
+}
+.autorize form input{
+    width: 80%;
+    margin-bottom: 25px;
+    height: 20px;
+    outline: none;
+    border: 0px;
+    border-bottom: 2px solid black;
+    font-size: 16px;
+}
+.registr form button{
+    margin-top: 10px;
+}
+.autorize form button{
+    margin-top: 10px;
+}
+.exit{
+    position: absolute;
+    top: -20px;
+    right: 0px;
+}
+.autorize{
+    position: absolute;
+    top: 88px;
+    left: 74%;
+    width: 20%;
+    height: 28%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid black;
+}
