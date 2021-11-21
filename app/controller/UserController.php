@@ -90,7 +90,7 @@ class UserController extends Controller
         }
     }
 
-    public function LoginUser($data){
+    public function LoginUser($data,$files){
         if ($_SERVER['REQUEST_METHOD']=='GET'){
             http_response_code(405);
             echo json_encode(['error'=>true,'message'=>'Нет информации']);
@@ -98,8 +98,9 @@ class UserController extends Controller
         }
         $user = new UserModel($this->ConnectDB());
         $result = $user->LoginUser($data);
-        if($result == false){
-            echo json_encode(['error'=>true,'message'=>'При авторизации произошла ошибка']);
+        http_response_code(200);
+        if($result === 'Введите логин' || $result === 'Введите пароль' || $result === 'Такого пользователя не существует'){
+            echo json_encode(['error'=>true,'message'=>$result]);
             exit();
         }else{
             echo json_encode(['message'=>'Вы успешно зашли']);

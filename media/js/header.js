@@ -42,6 +42,7 @@ $(document).ready(function () {
 });
 
 async function SubMit(selector, url){
+    $('.'+selector+' p').remove();
     $('.error').remove();
     let data = new FormData($('.'+selector)[0]);
     $.ajax({
@@ -51,7 +52,12 @@ async function SubMit(selector, url){
         processData: false,
         contentType: false,
         success:(response) => {
-            window.location.reload();
+            if(response.error){
+                $('.'+selector).append(`<p>${response.message}</p>`);
+            }else{
+                $('.'+selector).append(`<p>${response.message}</p>`);
+                location.reload();
+            }
         }
     });
 }

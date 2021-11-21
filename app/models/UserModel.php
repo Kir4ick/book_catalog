@@ -66,22 +66,19 @@ class UserModel extends Model
     }
     //Логиним пользователя
     public function LoginUser($data){
-        if(!empty($data['login'])){
-            if(!empty($data['password'])){
-                $login = $data['login'];
-                $password = md5($data['password']);
-                $usersDB = $this->connect->query("SELECT * FROM `users` WHERE `login` = '$login' AND `password` = '$password'");
-                var_dump($usersDB);
-                $user = $usersDB->fetch();
-                if (empty($user)){
-                    return false;
-                }
-                return $user;
-            }else{
-                return false;
-            }
-        }else{
-            return false;
+        if(empty($data['login'])){
+            return 'Введите логин';
         }
+        if(empty($data['password'])) {
+            return 'Введите пароль';
+        }
+        $login = $data['login'];
+        $password = md5($data['password']);
+        $usersDB = $this->connect->query("SELECT * FROM `users` WHERE `login` = '$login' AND `password` = '$password'");
+        $user = $usersDB->fetch();
+        if (empty($user)){
+            return 'Такого пользователя не существует';
+        }
+        return $user;
     }
 }

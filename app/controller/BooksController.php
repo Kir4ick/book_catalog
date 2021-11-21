@@ -36,8 +36,13 @@ class BooksController extends Controller
 
     public function GetBooksByName($data){
         $booksName = $this->SearchId($data);
-        $books = new BooksModel($this->ConnectDB());
-        $books = $books->GetBooksByName($booksName);
+        $bookss = new BooksModel($this->ConnectDB());
+        $books = $bookss->GetBooksByName($booksName);
+        if($books == 'Такой книги нет'){
+            http_response_code(200);
+            echo json_encode(['error'=>true, 'message'=>$books]);
+            exit();
+        }
         http_response_code(200);
         echo json_encode($books);
         exit();

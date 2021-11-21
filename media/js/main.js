@@ -56,29 +56,28 @@ $(document).ready(function () {
         let name = $('.search_name_book').val(); 
         $('.content_block').remove();
         $('.conteiner_content h1').remove();
-        if(name = " "){
-            $('.conteiner_content').append(`<h1>Такой книги нет</h1>`);
-        }else{
         $.ajax({
             method: "GET",
             url: "/get/booksName/"+name,
             success: function (response) {
-                    for (const element of response) {
-                        $('.conteiner_content').append(`
-                        <div onclick="GetPageBooks(${element.id})" class="content_block">
-                            <img src="${element.illustration}" alt="">
-                            <h3>Название</h3>
-                            <h3>${element.name_book}</h3>
-                            <p>Автор(ы)</p>
-                            <p>${element.authors_book}</p>
-                            <p>Год выпуска: ${element.year}</p>
-                        </div>
-                        `);
-                    }
+                        if(response.error){
+                            $('.conteiner_content').append(`<h1>Такой книги нет</h1>`);
+                        }else{
+                            for (const element of response) {
+                                $('.conteiner_content').append(`
+                                <div onclick="GetPageBooks(${element.id})" class="content_block">
+                                    <img src="${element.illustration}" alt="">
+                                    <h3>Название</h3>
+                                    <h3>${element.name_book}</h3>
+                                    <p>Автор(ы)</p>
+                                    <p>${element.authors_book}</p>
+                                    <p>Год выпуска: ${element.year}</p>
+                                </div>
+                                `);
+                            }       
+                        }        
                 }
             });
-        }
-        
     });
 
 });

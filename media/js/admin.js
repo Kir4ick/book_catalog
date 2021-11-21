@@ -169,7 +169,6 @@ function GetBooks(response){
 }
 async function GetInfoBooks(id, name_book, description, year){
     $('.new_booksss').remove();
-    $('.content').remove();
     $('.main').append(`
     <div class="new_booksss">
     <div>
@@ -201,7 +200,6 @@ async function Put_books(id){
                 method: "GET",
                 url: "/get/books",
                 success: function (response) {
-                    $('.content_block').remove();
                     GetBooks(response);
                 }
             });
