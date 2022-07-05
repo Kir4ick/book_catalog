@@ -1,2 +1,2 @@
-# PracticEnd
+# Book catalog
 Мой первый опыт в ООП и в попытке сделать api
